@@ -2,9 +2,9 @@ use std::convert::TryInto;
 
 use crate::auction::{Bid, SignedBid};
 use crate::error::TransactionError;
-use crate::transaction::{SignedTransaction, Transaction, TransactionSignature};
+use crate::transaction::{SignedTransaction, Transaction, TransactionSignature, TransactionType};
 use algonaut_core::{
-    Address, CompiledTeal, MultisigAddress, MultisigSignature, MultisigSubsig, ToMsgPack,
+    Address, CompiledTeal, MultisigAddress, MultisigSignature, MultisigSubsig, ToMsgPack, MicroAlgos,
 };
 use algonaut_crypto::{mnemonic, Signature};
 use rand::rngs::OsRng;
@@ -16,6 +16,21 @@ pub struct Account {
     seed: [u8; 32],
     address: Address,
     key_pair: Ed25519KeyPair,
+}
+
+pub trait Pay {
+    fn pay(&self, to: &Account, amount: MicroAlgos) -> TransactionType;
+}
+
+impl Pay for Account {
+    fn pay(&self, to: &Account, amount: MicroAlgos) -> TransactionType {
+        TransactionType::Payment(crate::transaction::Payment {
+            sender: self.address,
+            receiver: to.address,
+            amount: amount,
+            close_remainder_to: None,
+        })
+    }
 }
 
 impl Clone for Account {
