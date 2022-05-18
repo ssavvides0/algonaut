@@ -1,0 +1,7 @@
+/home/gedl/Workspace/algorand-oas-generated-clients/algod/target/debug/deps/log-47b550c9e6b4b594.rmeta: /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/lib.rs /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/macros.rs /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/serde.rs
+
+/home/gedl/Workspace/algorand-oas-generated-clients/algod/target/debug/deps/log-47b550c9e6b4b594.d: /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/lib.rs /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/macros.rs /home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/serde.rs
+
+/home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/lib.rs:
+/home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/macros.rs:
+/home/gedl/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.17/src/serde.rs:

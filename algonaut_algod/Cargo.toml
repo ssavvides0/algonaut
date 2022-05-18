@@ -1,0 +1,19 @@
+[package]
+authors = ["Manuel Mauro <manuel.mauro@protonmail.com>", "Ivan Schuetz <ivanhp978@gmail.com>"]
+description = "Autogenerate Open API client for algod."
+edition = "2018"
+keywords = ["Algorand", "sdk"]
+license = "MIT"
+name = "algonaut_algod"
+repository = "https://github.com/manuelmauro/algonaut"
+version = "0.3.0"
+
+[dependencies]
+serde = "^1.0"
+serde_derive = "^1.0"
+serde_json = "^1.0"
+url = "^2.2"
+
+[dependencies.reqwest]
+features = ["json", "multipart"]
+version = "^0.11"
