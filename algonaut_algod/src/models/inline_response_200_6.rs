@@ -10,8 +10,6 @@
 
 /// InlineResponse2006 : An catchpoint abort response.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse2006 {
     /// Catchup abort response string
@@ -22,10 +20,6 @@ pub struct InlineResponse2006 {
 impl InlineResponse2006 {
     /// An catchpoint abort response.
     pub fn new(catchup_message: String) -> InlineResponse2006 {
-        InlineResponse2006 {
-            catchup_message,
-        }
+        InlineResponse2006 { catchup_message }
     }
 }
-
-

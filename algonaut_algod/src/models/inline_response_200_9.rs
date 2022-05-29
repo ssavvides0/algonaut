@@ -10,27 +10,40 @@
 
 /// InlineResponse2009 : NodeStatus contains the information about a node status
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse2009 {
     /// The current catchpoint that is being caught up to
     #[serde(rename = "catchpoint", skip_serializing_if = "Option::is_none")]
     pub catchpoint: Option<String>,
     /// The number of blocks that have already been obtained by the node as part of the catchup
-    #[serde(rename = "catchpoint-acquired-blocks", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "catchpoint-acquired-blocks",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub catchpoint_acquired_blocks: Option<i32>,
     /// The number of accounts from the current catchpoint that have been processed so far as part of the catchup
-    #[serde(rename = "catchpoint-processed-accounts", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "catchpoint-processed-accounts",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub catchpoint_processed_accounts: Option<i32>,
     /// The total number of accounts included in the current catchpoint
-    #[serde(rename = "catchpoint-total-accounts", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "catchpoint-total-accounts",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub catchpoint_total_accounts: Option<i32>,
     /// The total number of blocks that are required to complete the current catchpoint catchup
-    #[serde(rename = "catchpoint-total-blocks", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "catchpoint-total-blocks",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub catchpoint_total_blocks: Option<i32>,
     /// The number of accounts from the current catchpoint that have been verified so far as part of the catchup
-    #[serde(rename = "catchpoint-verified-accounts", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "catchpoint-verified-accounts",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub catchpoint_verified_accounts: Option<i32>,
     /// CatchupTime in nanoseconds
     #[serde(rename = "catchup-time")]
@@ -63,7 +76,16 @@ pub struct InlineResponse2009 {
 
 impl InlineResponse2009 {
     /// NodeStatus contains the information about a node status
-    pub fn new(catchup_time: i32, last_round: i32, last_version: String, next_version: String, next_version_round: i32, next_version_supported: bool, stopped_at_unsupported_round: bool, time_since_last_round: i32) -> InlineResponse2009 {
+    pub fn new(
+        catchup_time: i32,
+        last_round: i32,
+        last_version: String,
+        next_version: String,
+        next_version_round: i32,
+        next_version_supported: bool,
+        stopped_at_unsupported_round: bool,
+        time_since_last_round: i32,
+    ) -> InlineResponse2009 {
         InlineResponse2009 {
             catchpoint: None,
             catchpoint_acquired_blocks: None,
@@ -83,5 +105,3 @@ impl InlineResponse2009 {
         }
     }
 }
-
-

@@ -10,8 +10,6 @@
 
 /// InlineResponse2005 : An catchpoint start response.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse2005 {
     /// Catchup start response string
@@ -22,10 +20,6 @@ pub struct InlineResponse2005 {
 impl InlineResponse2005 {
     /// An catchpoint start response.
     pub fn new(catchup_message: String) -> InlineResponse2005 {
-        InlineResponse2005 {
-            catchup_message,
-        }
+        InlineResponse2005 { catchup_message }
     }
 }
-
-

@@ -10,8 +10,6 @@
 
 /// DryrunState : Stores the TEAL eval step data
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct DryrunState {
     /// Evaluation error if any
@@ -41,5 +39,3 @@ impl DryrunState {
         }
     }
 }
-
-

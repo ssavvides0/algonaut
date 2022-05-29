@@ -10,8 +10,6 @@
 
 /// AssetHolding : Describes an asset held by an account.  Definition: data/basics/userBalance.go : AssetHolding
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct AssetHolding {
     /// \\[a\\] number of units held.
@@ -35,5 +33,3 @@ impl AssetHolding {
         }
     }
 }
-
-

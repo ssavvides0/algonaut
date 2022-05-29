@@ -10,8 +10,6 @@
 
 /// ApplicationLocalState : Stores local state associated with an application.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ApplicationLocalState {
     /// The application which this local state is for.
@@ -34,5 +32,3 @@ impl ApplicationLocalState {
         }
     }
 }
-
-

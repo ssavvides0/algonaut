@@ -10,8 +10,6 @@
 
 /// Version : algod version information.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Version {
     #[serde(rename = "build")]
@@ -26,7 +24,12 @@ pub struct Version {
 
 impl Version {
     /// algod version information.
-    pub fn new(build: crate::models::BuildVersion, genesis_hash_b64: String, genesis_id: String, versions: Vec<String>) -> Version {
+    pub fn new(
+        build: crate::models::BuildVersion,
+        genesis_hash_b64: String,
+        genesis_id: String,
+        versions: Vec<String>,
+    ) -> Version {
         Version {
             build: Box::new(build),
             genesis_hash_b64,
@@ -35,5 +38,3 @@ impl Version {
         }
     }
 }
-
-

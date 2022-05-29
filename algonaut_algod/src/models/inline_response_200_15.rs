@@ -10,8 +10,6 @@
 
 /// InlineResponse20015 : TransactionParams contains the parameters that help a client construct a new transaction.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse20015 {
     /// ConsensusVersion indicates the consensus protocol version as of LastRound.
@@ -36,7 +34,14 @@ pub struct InlineResponse20015 {
 
 impl InlineResponse20015 {
     /// TransactionParams contains the parameters that help a client construct a new transaction.
-    pub fn new(consensus_version: String, fee: i32, genesis_hash: String, genesis_id: String, last_round: i32, min_fee: i32) -> InlineResponse20015 {
+    pub fn new(
+        consensus_version: String,
+        fee: i32,
+        genesis_hash: String,
+        genesis_id: String,
+        last_round: i32,
+        min_fee: i32,
+    ) -> InlineResponse20015 {
         InlineResponse20015 {
             consensus_version,
             fee,
@@ -47,5 +52,3 @@ impl InlineResponse20015 {
         }
     }
 }
-
-

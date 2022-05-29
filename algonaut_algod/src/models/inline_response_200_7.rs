@@ -10,8 +10,6 @@
 
 /// InlineResponse2007 : Supply represents the current supply of MicroAlgos in the system
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse2007 {
     /// Round
@@ -35,5 +33,3 @@ impl InlineResponse2007 {
         }
     }
 }
-
-

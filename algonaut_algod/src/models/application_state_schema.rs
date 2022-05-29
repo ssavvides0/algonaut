@@ -10,8 +10,6 @@
 
 /// ApplicationStateSchema : Specifies maximums on the number of each type that may be stored.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ApplicationStateSchema {
     /// \\[nbs\\] num of byte slices.
@@ -31,5 +29,3 @@ impl ApplicationStateSchema {
         }
     }
 }
-
-

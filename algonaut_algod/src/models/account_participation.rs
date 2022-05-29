@@ -10,8 +10,6 @@
 
 /// AccountParticipation : AccountParticipation describes the parameters used by this account in consensus protocol.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct AccountParticipation {
     /// \\[sel\\] Selection public key (if any) currently registered for this round.
@@ -36,7 +34,13 @@ pub struct AccountParticipation {
 
 impl AccountParticipation {
     /// AccountParticipation describes the parameters used by this account in consensus protocol.
-    pub fn new(selection_participation_key: String, vote_first_valid: i32, vote_key_dilution: i32, vote_last_valid: i32, vote_participation_key: String) -> AccountParticipation {
+    pub fn new(
+        selection_participation_key: String,
+        vote_first_valid: i32,
+        vote_key_dilution: i32,
+        vote_last_valid: i32,
+        vote_participation_key: String,
+    ) -> AccountParticipation {
         AccountParticipation {
             selection_participation_key,
             state_proof_key: None,
@@ -47,5 +51,3 @@ impl AccountParticipation {
         }
     }
 }
-
-

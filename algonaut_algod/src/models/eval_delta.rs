@@ -10,8 +10,6 @@
 
 /// EvalDelta : Represents a TEAL value delta.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EvalDelta {
     /// \\[at\\] delta action.
@@ -35,5 +33,3 @@ impl EvalDelta {
         }
     }
 }
-
-

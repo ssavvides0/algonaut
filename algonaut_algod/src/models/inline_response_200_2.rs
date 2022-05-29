@@ -10,8 +10,6 @@
 
 /// InlineResponse2002 : PendingTransactions is an array of signed transactions exactly as they were submitted.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineResponse2002 {
     /// An array of signed transaction objects.
@@ -24,12 +22,13 @@ pub struct InlineResponse2002 {
 
 impl InlineResponse2002 {
     /// PendingTransactions is an array of signed transactions exactly as they were submitted.
-    pub fn new(top_transactions: Vec<serde_json::Value>, total_transactions: i32) -> InlineResponse2002 {
+    pub fn new(
+        top_transactions: Vec<serde_json::Value>,
+        total_transactions: i32,
+    ) -> InlineResponse2002 {
         InlineResponse2002 {
             top_transactions,
             total_transactions,
         }
     }
 }
-
-

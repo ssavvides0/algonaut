@@ -10,15 +10,16 @@
 
 /// PendingTransactionResponse : Details about a pending transaction. If the transaction was recently confirmed, includes confirmation details like the round and reward details.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct PendingTransactionResponse {
     /// The application index if the transaction was found and it created an application.
     #[serde(rename = "application-index", skip_serializing_if = "Option::is_none")]
     pub application_index: Option<i32>,
     /// The number of the asset's unit that were transferred to the close-to address.
-    #[serde(rename = "asset-closing-amount", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "asset-closing-amount",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub asset_closing_amount: Option<i32>,
     /// The asset index if the transaction was found and it created an asset.
     #[serde(rename = "asset-index", skip_serializing_if = "Option::is_none")]
@@ -44,7 +45,7 @@ pub struct PendingTransactionResponse {
     /// \\[lg\\] Logs for the application being executed by this transaction.
     #[serde(rename = "logs", skip_serializing_if = "Option::is_none")]
     pub logs: Option<Vec<String>>,
-    /// Indicates that the transaction was kicked out of this node's transaction pool (and specifies why that happened).  An empty string indicates the transaction wasn't kicked out of this node's txpool due to an error. 
+    /// Indicates that the transaction was kicked out of this node's transaction pool (and specifies why that happened).  An empty string indicates the transaction wasn't kicked out of this node's txpool due to an error.
     #[serde(rename = "pool-error")]
     pub pool_error: String,
     /// Rewards in microalgos applied to the receiver account.
@@ -79,5 +80,3 @@ impl PendingTransactionResponse {
         }
     }
 }
-
-

@@ -10,8 +10,6 @@
 
 /// DryrunTxnResult : DryrunTxnResult contains any LogicSig or ApplicationCall program debug information and state updates from a dryrun.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct DryrunTxnResult {
     #[serde(rename = "app-call-messages", skip_serializing_if = "Option::is_none")]
@@ -30,7 +28,10 @@ pub struct DryrunTxnResult {
     #[serde(rename = "local-deltas", skip_serializing_if = "Option::is_none")]
     pub local_deltas: Option<Vec<crate::models::AccountStateDelta>>,
     /// Disassembled lsig program line by line.
-    #[serde(rename = "logic-sig-disassembly", skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "logic-sig-disassembly",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub logic_sig_disassembly: Option<Vec<String>>,
     #[serde(rename = "logic-sig-messages", skip_serializing_if = "Option::is_none")]
     pub logic_sig_messages: Option<Vec<String>>,
@@ -57,5 +58,3 @@ impl DryrunTxnResult {
         }
     }
 }
-
-

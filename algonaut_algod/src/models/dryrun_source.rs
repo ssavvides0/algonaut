@@ -10,8 +10,6 @@
 
 /// DryrunSource : DryrunSource is TEAL source text that gets uploaded, compiled, and inserted into transactions or application state.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct DryrunSource {
     #[serde(rename = "app-index")]
@@ -36,5 +34,3 @@ impl DryrunSource {
         }
     }
 }
-
-

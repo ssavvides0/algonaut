@@ -10,8 +10,6 @@
 
 /// TealValue : Represents a TEAL value.
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct TealValue {
     /// \\[tb\\] bytes value.
@@ -28,12 +26,6 @@ pub struct TealValue {
 impl TealValue {
     /// Represents a TEAL value.
     pub fn new(bytes: String, _type: i32, uint: i32) -> TealValue {
-        TealValue {
-            bytes,
-            _type,
-            uint,
-        }
+        TealValue { bytes, _type, uint }
     }
 }
-
-

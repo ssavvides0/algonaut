@@ -10,8 +10,6 @@
 
 /// Asset : Specifies both the unique identifier and the parameters for an asset
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Asset {
     /// unique asset identifier
@@ -30,5 +28,3 @@ impl Asset {
         }
     }
 }
-
-

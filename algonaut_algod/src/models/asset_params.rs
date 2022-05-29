@@ -10,8 +10,6 @@
 
 /// AssetParams : AssetParams specifies the parameters for an asset.  \\[apar\\] when part of an AssetConfig transaction.  Definition: data/transactions/asset.go : AssetParams
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct AssetParams {
     /// \\[c\\] Address of account used to clawback holdings of this asset.  If empty, clawback is not permitted.
@@ -83,5 +81,3 @@ impl AssetParams {
         }
     }
 }
-
-
